@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%=data.title%></title>
+    <style>
+      body {
+        background: rgb(222, 222, 234);
+        background: -moz-radial-gradient(
+          circle,
+          rgba(222, 222, 234, 1) 0%,
+          rgba(112, 112, 210, 1) 50%,
+          rgba(39, 170, 199, 1) 100%
+        );
+        background: -webkit-radial-gradient(
+          circle,
+          rgba(222, 222, 234, 1) 0%,
+          rgba(112, 112, 210, 1) 50%,
+          rgba(39, 170, 199, 1) 100%
+        );
+        background: radial-gradient(
+          circle,
+          rgba(222, 222, 234, 1) 0%,
+          rgba(112, 112, 210, 1) 50%,
+          rgba(39, 170, 199, 1) 100%
+        );
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#dedeea",endColorstr="#27aac7",GradientType=1);
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      table,
+      tr,
+      td {
+        border: 1px whitesmoke solid;
+      }
+    </style>
+  </head>
+  <body>
+    <center>
+      <table>
+        <thead>
+          <tr>
+            <%=data.desc%>
+          </tr>
+          <tr>
+            <td>Key</td>
+            <td>Description</td>
+            <td>Redirect URL</td>
+          </tr>
+        </thead>
+        <tbody>
+          <% data.urls.forEach(URL=>{ %>
+          <tr>
+            <td><%=URL.key%></td>
+            <td><%=URL.desc%></td>
+            <td>
+              <a href="<%= URL.url %> "><button>Visit Site</button></a>
+            </td>
+          </tr>
+          <% })%>
+        </tbody>
+      </table>
+    </center>
+  </body>
+</html>
