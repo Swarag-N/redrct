@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title><%=data.title%></title>
+    <title>VIT Linux Users Group</title>
     <style>
       body {
         background: rgb(222, 222, 234);
@@ -43,7 +43,7 @@
       <table>
         <thead>
           <tr>
-            <%=data.desc%>
+            The Vellore (VIT) Linux User Group
           </tr>
           <tr>
             <td>Key</td>
@@ -52,15 +52,31 @@
           </tr>
         </thead>
         <tbody>
-          <% data.urls.forEach(URL=>{ %>
+          
           <tr>
-            <td><%=URL.key%></td>
-            <td><%=URL.desc%></td>
+            <td>home</td>
+            <td>The Vellore (VIT) Linux User Group</td>
             <td>
-              <a href="<%= URL.url %> "><button>Visit Site</button></a>
+              <a href="https://vitlug-website.herokuapp.com/index.html "><button>Visit Site</button></a>
             </td>
           </tr>
-          <% })%>
+          
+          <tr>
+            <td>github</td>
+            <td>&#39;VIT Linux Users Group is a club which teaches the basics concepts behind linux to linux ehtusiasts, and encouragees people to contribute to open source.</td>
+            <td>
+              <a href="https://github.com/vitlug "><button>Visit Site</button></a>
+            </td>
+          </tr>
+          
+          <tr>
+            <td>google</td>
+            <td>Search the world&#39;s information, including webpages, images, videos and more</td>
+            <td>
+              <a href="https://www.google.com/ "><button>Visit Site</button></a>
+            </td>
+          </tr>
+          
         </tbody>
       </table>
     </center>
