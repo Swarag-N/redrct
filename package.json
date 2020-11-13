@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node ./src/index.js",
+    "build": "node ./src/index.js",
     "test": "mocha"
   },
   "author": "Swarag",
